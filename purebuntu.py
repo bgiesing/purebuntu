@@ -47,10 +47,10 @@ def main():
       removalmetapackage=args.remove
       keptmetapackage=args.keep         
       removalitems=getitemstoremove(getdependencies(removalmetapackage), getdependencies(keptmetapackage))
-      print("\nsudo apt-get remove", end=" ")
+      print("\nsudo apt remove", end=" ")
       for removalitem in removalitems:
          print(removalitem, end=" ")
-      print("&& sudo apt-get install %s" % keptmetapackage, end="\n")
+      print("&& sudo apt install %s" % keptmetapackage, end="\n")
    else:
       print("You need to specify a metapackage to --keep and a metapackage to --remove. Run pureubuntu.py -h for more details.", end="\n")
 
